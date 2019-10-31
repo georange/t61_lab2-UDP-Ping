@@ -3,7 +3,7 @@ import time
 import sys
 
 start = time.clock()
-s = socket(AF_INET,SOCK_DGRAM)
+s = socket(AF_INET,SOCK_DGRAM)		# sudo mn -x  	to start server
 
 # take command line arguments
 ip = sys.argv[1]
