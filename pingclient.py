@@ -2,7 +2,7 @@ from socket import *
 import time
 import sys
 
-start = time.clock()
+
 s = socket(AF_INET,SOCK_DGRAM)		# sudo mn -x  	to start server
 
 # take command line arguments
@@ -17,6 +17,7 @@ for i in range(1,11):
 	try:
 		# send 10 pings to server
 		msg = "ping " + str(i) + " " + time.asctime(time.localtime(time.time()))
+		start = time.clock()
 		s.sendto(msg, server)
 
 		# wait for response or timeout 
